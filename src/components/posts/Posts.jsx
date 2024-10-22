@@ -16,7 +16,7 @@ const Posts = () => {
             <h2 className="text-xl font-semibold">{post.title}</h2>
             <p>{post.body}</p>
             <Link to={`/posts/${post.id}`}>
-              <button className="text-blue-500">Read more</button>
+              <button className='bg-green-600 py-3 px-6 rounded-md mt-4 font-semibold text-white'>Read more</button>
             </Link>
           </div>
         ))}
