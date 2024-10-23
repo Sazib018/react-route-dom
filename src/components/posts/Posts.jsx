@@ -5,9 +5,9 @@ const Posts = () => {
   const posts = useLoaderData();
 
   return (
-    <div>
+    <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Posts</h1>
-      <div className="grid grid-cols-4 gap-6 mb-6">
+      <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
         {posts.map(post => (
           <div 
             key={post.id} 
@@ -16,7 +16,9 @@ const Posts = () => {
             <h2 className="text-xl font-semibold">{post.title}</h2>
             <p>{post.body}</p>
             <Link to={`/posts/${post.id}`}>
-              <button className='bg-green-600 py-3 px-6 rounded-md mt-4 font-semibold text-white'>Read more</button>
+              <button className='bg-green-600 py-3 px-6 rounded-md mt-4 font-semibold text-white'>
+                Read more
+              </button>
             </Link>
           </div>
         ))}
