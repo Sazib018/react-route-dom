@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { createBrowserRouter, RouterProvider,} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import Errorpage from './components/Errorpage/Errorpage';
 import Home from './components/Home/Home';
 import Users from './components/users/Users';
@@ -10,16 +10,16 @@ import App from './App';
 import Posts from './components/posts/Posts';
 import PostDetails from './components/posts/PostDetails';
 
-// const route = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <div>This is home</div>
-//   },
-//   {
-//     path: "/about",
-//     element: <div>this is about</div>
-//   },
-// ])
+/* const route = createBrowserRouter([
+   {
+   path: "/",
+    element: <div>This is home</div>
+  },
+  {
+   path: "/about",
+    element: <div>this is about</div>
+  },
+])  */
 
 const router = createBrowserRouter([
   {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <UserDetails />,
         loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
       },
-  /*   posts api & loader */
+      /*   posts api & loader */
       {
         path: "/posts",
         element: <Posts />,
